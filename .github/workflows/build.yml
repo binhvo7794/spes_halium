@@ -1,0 +1,13 @@
+name: Build
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup
+        run: |
+            docker run --rm -v /tmp:/buildd -v $PWD:/buildd/sources -i quay.io/droidian/build-essential:current-amd64 bash -c "apt-get install curl linux-packaging-snippets -y && cd /buildd/sources && rm -f debian/control && debian/rules debian/control && RELENG_HOST_ARCH="arm64" releng-build-package && curl bashupload.com -T out/KERNEL_OBJ/boot.img"

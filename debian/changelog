@@ -1,0 +1,34 @@
+linux-android-xiaomi-spes (0.0.0+git20250609132205.7517baa.halium) halium; urgency=medium
+
+  [ binhvo7794 ]
+  * Init droidian
+
+  [ muralivijay ]
+  * Revert "spes-perf_defconfig: Disable profiling support"
+  * spes_perf_defconfig: Enable CONFIG_UID_SYS_STATS.
+
+  [ Tashfin Shakeer Rhythm ]
+  * regulator: cpr3-regulator: Don't create debugfs when !CONFIG_DEBUG_FS
+  * md: dm-android-verity: Don't create debugfs when !CONFIG_DEBUG_FS
+  * clk-cpu-osm-660: Disable population of debugfs when !CONFIG_DEBUG_FS
+  * regulator: msm_gfx_ldo: Don't create debugfs when !CONFIG_DEBUG_FS
+  * serial: msm_serial_hs: Don't create debugfs when !CONFIG_DEBUG_FS
+  * net: bonding: Compile out bond_debugfs when !CONFIG_DEBUG_FS
+  * platform: ipa_v2: Compile out ipa_debugfs when !CONFIG_DEBUG_FS
+
+  [ Anuj Garg ]
+  * msm: adsprpc: Don't create debugfs global file if already exists
+
+  [ Danny Lin ]
+  * msm: msm_bus: Never compile debugfs-related code
+
+  [ Fiqri Ardyansyah ]
+  * cnss_utils: Don't create debugfs when CONFIG_DEBUG_FS=n
+  * char: adsprpc: Don't create debugfs at init when CONFIG_DEBUG_FS=n
+  * cnss_prealloc: Don't create debugfs at init when CONFIG_DEBUG_FS=n
+
+  [ UtsavBalar1231 ]
+  * diag: Allow disabling diag debugfs
+
+ -- binhvo7794 <66165345+binhvo7794@users.noreply.github.com>  Mon, 09 Jun 2025 13:22:05 +0000
+
